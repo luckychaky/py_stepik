@@ -16,19 +16,11 @@ Sample Output 2:
 '''
 
 s = [int(i) for i in input().split()]
-length = len(s)
-
-if length == 1:
-    print(*s)
+if len(s) == 1:
+    print(s[0])
 else:
-    s1 = []
-    summa_near_i = 0
-
-    for j in range(length):
-        if j != (length - 1):
-            summa_near_i = (s[j - 1] + s[j + 1])
-            s1.append(summa_near_i)
+    for j in range(len(s)):
+        if j != (len(s) - 1):
+            print(s[j - 1] + s[j + 1], end = ' ')
         else:
-            summa_near_i = (s[j - 1] + s[0])
-            s1.append(summa_near_i)
-    print(*s1)
+            print(s[j - 1] + s[0], end = ' ')

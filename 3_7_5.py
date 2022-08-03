@@ -30,3 +30,20 @@ coordinates = {'север': 0, 'запад': 0, 'юг': 0, 'восток': 0}
 for key, value in [input().split() for i in range(int(input()))]:
     coordinates[key] += int(value)
 print(coordinates['восток'] - coordinates['запад'], coordinates['север'] - coordinates['юг'])
+
+'''
+n = int(input())
+x = 0
+y = 0
+for i in range(n):
+    side = input().split()
+    if side[0] == 'север':
+        y += int(side[1])
+    elif side[0] == 'юг':
+        y -= int(side[1])
+    elif side[0] == 'восток' :
+        x += int(side[1])
+    elif side[0] == 'запад' :
+        x -= int(side[1])
+print(x, y)
+'''
